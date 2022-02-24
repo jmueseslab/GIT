@@ -1,0 +1,99 @@
+
+/////////////////////////////////////////////////////////////////
+
+TEMAS A REVISAR BASES DE GIT
+
+- git cherry pick : Llevar el estado de un repositorio hasta un commit para poder recuperar algo.
+
+- revisar comandos -am
+
+/////////////////////////////////////////////////////////////////
+
+
+===================
+GIT herramienta para el control de versiones, tener controlado todos los cambios que tenemos sobre unos archivos o proyecto
+
+
+**comandos basicos
+
+git init
+git status 
+git add .
+git add nombre_archivo
+git rm . => elimina los archivos que se van agregar
+git commit -m "descripcion del cambio realizado"
+git log => imprime todos los commits
+git reset --hard IDENTIFICADOR => Regresar a un commit anterior
+git diff => ver los cambios desde el ultimo commit
+
+**administrando proyectos git
+
+git clone https://github.com/proyectogithub
+git pull => bajar los cambios cuando alguien modifica el mismo repositorio desde otro lugar
+git push origin master 
+git remote add origin https://github.com/user/repo.git => agregar la direccion de un repositorio remoto 
+
+
+**ramas en git
+
+las ramas sirven para llevar un cambios de manera independiente
+
+git push origin master
+
+git checkout nombre_de_rama => posicionarnos en una rama
+
+git checkout -b rama_nueva => crear una rama
+
+git merge hotfix => como fusionar ramas
+
+git branch => en que rama se encuentra uno
+
+**COMANDOS AVANZADOS
+
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+
+*Descartar cambios temporalmente
+
+git stash => descartar cambios temporalmente
+git stash pop => recuperar cambios
+
+*pull de un solo commit
+
+git cherry-pick <commitSHA> => hacer pull para un determinado commit
+
+*GIT LOG AVANZADO
+
+git log --online => imprime identificador y texto del commit
+
+git log --graph --oneline => imprime lista de commits y en caracteres ASCII representa el arbol de las ramas
+
+git log --author="John"
+git log --after="2014-7-1"
+git log -- foo.py bar.py
+
+
+=================================================================
+…or create a new repository on the command line
+echo "# GIT" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:jmueseslab/GIT.git
+git push -u origin main
+
+=================================================================
+…or push an existing repository from the command line
+git remote add origin git@github.com:jmueseslab/GIT.git
+git branch -M main
+git push -u origin main
+
+
+
+
+
+
+
